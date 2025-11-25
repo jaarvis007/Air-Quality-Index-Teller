@@ -31,7 +31,7 @@ function App() {
     setAqiData(null);
 
     try {
-      const response = await axios.get(`http://localhost:3001/api/aqi/${encodeURIComponent(city.trim())}`);
+      const response = await axios.get(`https://air-quality-index-teller-1.onrender.com/api/aqi/${encodeURIComponent(city.trim())}`);
       setAqiData(response.data);
     } catch (err) {
       console.error(err);
@@ -100,7 +100,7 @@ function App() {
       )}
 
       <footer className={`mt-12 text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
-        Developed by <a href="https://github.com/jaarvis007/Air-Quality-Index-Teller" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">Aman Jain</a>
+        Developed by <a href="https://github.com/jaarvis007/Air-Quality-Index-Teller" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">Aman Jain 👨🏻‍💻</a>
       </footer>
     </div>
   );
